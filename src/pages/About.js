@@ -4,9 +4,9 @@ import { Container, Typography} from "@mui/material";
 
 const About = () => {
   return (
-    <Container>
+    <Container style={{ textAlign: 'right' , fontWeight: "bold"}}>
       <Typography variant="h4" gutterBottom>
-        درباره ما
+        :درباره ی تخت جمشید
       </Typography>
       <Typography variant="body1" paragraph>
         تخت جمشید نمادی از شکوه و عظمت در ایران باستان و یکی از جاهای دیدنی

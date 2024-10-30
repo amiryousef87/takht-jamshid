@@ -1,8 +1,7 @@
 import React from "react";
-import { Container, Typography, Box } from "@mui/material";
+import { Container, Typography, Box, Button } from "@mui/material";
 import { styled } from "@mui/system";
-import videoSrc from "../assets/perespolice.mp4"; // وارد کردن ویدیو
-
+import videoSrc from "../assets/perespolice.mp4"; 
 const BackgroundVideo = styled(Box)({
   position: "relative",
   height: "100vh",
@@ -35,10 +34,47 @@ const Home = () => {
           paddingTop: "25vh",
         }}
       >
-        <Typography variant="h2" gutterBottom>
-          خوش آمدید به سایت تخت جمشید
+        <Typography variant="h2" gutterBottom color="white">
+          Takht Jamshid, Achaemenid throne
         </Typography>
-        <Typography variant="h5">بازدید از این مجموعه شگفت‌انگیز</Typography>
+        <Typography variant="h5" color="white">Visit this amazing collection</Typography>
+
+        {/* دکمه‌ها */}
+        <Box sx={{ marginTop: 4 }}>
+          <Button
+            variant="outlined"
+            sx={{
+              color: "white",
+              borderColor: "white",
+              marginRight: 2,
+              "&:hover": {
+                borderColor: "white",
+                backgroundColor: "rgba(255, 255, 255, 0.1)",
+              },
+            }}
+            onClick={() => window.open("/")}
+          >
+            Visit the site
+          </Button>
+          <Button
+            variant="contained"
+            sx={{
+              backgroundColor: "black",
+              color: "white",
+              "&:hover": {
+                backgroundColor: "rgba(255, 255, 255, 0.2)",
+              },
+            }}
+            onClick={() =>
+              window.open(
+                "https://360.persepolis.ir/Aerial-Persepolis-Tour/",
+                "_blank"
+              )
+            }
+          >
+          360° virtual tour
+          </Button>
+        </Box>
       </Container>
     </BackgroundVideo>
   );
